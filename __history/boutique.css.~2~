@@ -1,0 +1,65 @@
+/* Created by TopStyle Trial - www.topstyle4.com */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff7f0;
+  color: #333;
+}
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+main {
+  padding: 40px;
+  text-align: center;
+}
+footer {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+#produits {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.produit {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 200px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.produit img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.produit button {
+  background-color: #cc3366;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.produit button:hover {
+  background-color: #a82a52;
+}

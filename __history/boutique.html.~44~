@@ -1,0 +1,151 @@
+<!-- Created by TopStyle Trial - www.topstyle4.com -->
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" media="screen" type="text/css" title="style" href="boutique.css"/>
+</head>
+
+<body>
+<header>
+    <h1>Calypso Fragrance</h1>
+</header>
+<main>
+<img src="imagescf/logocf.jpg" height="250" width="600" />
+    <h2><marquee>BIENVENUE CHEZ CALYPSO FRAGRANCE</marquee></h2>
+    <p>Découvrez nos parfums uniques, élégants et envoûtants.</p>
+    
+    <section id="produits">
+    <h3>Nos produits</h3>
+
+    <article class="produit" data-id="1" data-nom="Parfum Floral" data-contenance="100ml" data-prix="3000">
+      <img src="imagescf/imagexemple1.webp" alt="Parfum Floral" width="150" />
+      <h4>Parfum Floral</h4>
+      <p>Un parfum léger et frais aux notes florales.</p>
+      <p>Contenance : 100 ml</p>
+      <p><strong>Prix : 3000FCFA</strong></p>
+      <button onclick="ajouterAuPanier(1)">Ajouter au panier</button>
+    </article>
+
+    <article class="produit" data-id="2" data-nom="Parfum Boisé" data-contenance="100ml" data-prix="3000">
+      <img src="imagescf/imagexemple2.webp" alt="Parfum Boisé" width="150" />
+      <h4>Parfum Boisé</h4>
+      <p>Un parfum intense avec des notes boisées et épicées.</p>
+      <p>Contenance : 100 ml</p>
+      <p><strong>Prix : 3000FCFA</strong></p>
+      <button onclick="ajouterAuPanier(2)">Ajouter au panier</button>
+    </article>
+<article class="produit" data-id="3" data-nom="Parfum Intense" data-contenance="100ml" data-prix="3000">
+      <img src="imagescf/imagexemple3.webp" alt="Parfum intense" width="150" />
+      <h4>Parfum Intense</h4>
+      <p>Un parfum intense avec des notes boisées et épicées.</p>
+      <p>Contenance : 100 ml</p>
+      <p><strong>Prix : 3000FCFA</strong></p>
+      <button onclick="ajouterAuPanier(3)">Ajouter au panier</button>
+    </article>
+<article class="produit" data-id="4" data-nom="Parfum Boisé" data-contenance="100ml" data-prix="3000">
+      <img src="imagescf/imagexemple4.webp" alt="Parfum Boisé" width="150" />
+      <h4>Parfum Boisé</h4>
+      <p>Un parfum intense avec des notes boisées et épicées.</p>
+      <p>Contenance : 100 ml</p>
+      <p><strong>Prix : 3000FCFA</strong></p>
+      <button onclick="ajouterAuPanier(4)">Ajouter au panier</button>
+    </article>
+<article class="produit" data-id="5" data-nom="Parfum Boisé" data-contenance="100ml" data-prix="3000">
+      <img src="imagescf/imagexemple5.webp" alt="Parfum Boisé" width="150" />
+      <h4>Parfum Boisé</h4>
+      <p>Un parfum intense avec des notes boisées et épicées.</p>
+      <p>Contenance : 100 ml</p>
+      <p><strong>Prix : 3000FCFA</strong></p>
+      <button onclick="ajouterAuPanier(5)">Ajouter au panier</button>
+    </article>
+</section>
+ <section id="panier">
+      <h3>Votre panier</h3>
+      <ul id="liste-panier">
+        <li>Votre panier est vide.</li>
+      </ul>
+<button onclick="envoyerCommandeWhatsApp()">Envoyer la commande par WhatsApp</button>
+      <p id="total"></p>
+    </section>
+<script>
+    // Tableau pour stocker les produits ajoutés
+    const panier = [];
+
+    // Récupérer les infos produits dans la page
+    function getProduitById(id) {
+      return document.querySelector(`.produit[data-id="${id}"]`);
+    }
+
+    // Ajouter un produit au panier
+    function ajouterAuPanier(id) {
+      const produitElem = getProduitById(id);
+      const nom = produitElem.getAttribute('data-nom');
+      const prix = parseFloat(produitElem.getAttribute('data-prix'));
+      const contenance = parseFloat(produitElem.getAttribute('data-contenance'));
+      // Vérifie si le produit est déjà dans le panier
+      const index = panier.findIndex(item => item.id === id);
+      if (index === -1) {
+        panier.push({id, nom,contenance, prix, quantite: 1});
+      } else {
+        panier[index].quantite++;
+      }
+
+      afficherPanier();
+    }
+
+    // Afficher le contenu du panier
+    function afficherPanier() {
+      const listePanier = document.getElementById('liste-panier');
+      const totalElem = document.getElementById('total');
+
+      if (panier.length === 0) {
+        listePanier.innerHTML = '<li>Votre panier est vide.</li>';
+        totalElem.textContent = '';
+        return;
+      }
+
+      listePanier.innerHTML = '';
+      let total = 0;
+
+      panier.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = ` ${item.quantite} ${item.nom} de ${item.contenance}ml - ${item.prix * item.quantite} FCFA`;
+        listePanier.appendChild(li);
+        total += item.prix * item.quantite;
+      });
+
+      totalElem.textContent = `Total : ${total} FCFA`;
+    }
+    
+  function envoyerCommandeWhatsApp() {
+  if (panier.length === 0) {
+    alert("Votre panier est vide.");
+    return;
+  }
+
+  let message = "Bonjour, je souhaite commander :%0A";
+  panier.forEach(item => {
+    message += `- ${item.quantite} ${item.nom} de ${item.contenance}ml (${item.prix * item.quantite}FCFA)%0A`;
+  });
+
+  const numero = "221776631653"; 
+  const url = `https://wa.me/221776631653?text=${message}`;
+  window.open(url, '_blank');
+}
+
+  </script>
+<section id="contacts" style="margin-top: 40px; background: #fff; padding: 20px; border-radius: 8px;">
+    <h3>Contactez-nous</h3>
+    <p>&#128222; Téléphone <a href="tel:+221776631653">77 663 16 53</a></p>
+    <p>&#128231; Courriel <a href="mailto:elhadjimomardiop77@gmail.com">elhadjimomardiop77@gmail.com</a></p>
+    <p>&#128205;Adresse : Cité Comico 4, Yeumbeul, Dakar, Senegal</p>
+  </section>
+</main>
+
+
+  <footer>
+    <p>&copy; 2025 Calypso Fragrance</p>
+  </footer>
+
+</body>
+</html>
