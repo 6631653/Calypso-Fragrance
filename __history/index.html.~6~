@@ -13,7 +13,7 @@
 <main>
 <img src="imagescf/logocf.jpg" height="250" width="600" />
     <h2><marquee>BIENVENUE CHEZ CALYPSO FRAGRANCE</marquee></h2>
-    <p>Découvrez nos parfums uniques, élégants et envoûtants.</p>
+    <p><<D�couvrez nos parfums uniques, �l�gants et envo�tants>>.</p>
     
     <section id="produits">
     <h3>Nos produits</h3>
@@ -21,16 +21,16 @@
     <article class="produit" data-id="1" data-nom="Parfum Floral" data-contenance="100ml" data-prix="3000">
       <img src="imagescf/imagexemple1.webp" alt="Parfum Floral" width="150" />
       <h4>Parfum Floral</h4>
-      <p>Un parfum léger et frais aux notes florales.</p>
+      <p>Un parfum l�ger et frais aux notes florales.</p>
       <p>Contenance : 100 ml</p>
       <p><strong>Prix : 3000FCFA</strong></p>
       <button onclick="ajouterAuPanier(1)">Ajouter au panier</button>
     </article>
 
-    <article class="produit" data-id="2" data-nom="Parfum Boisé" data-contenance="100ml" data-prix="3000">
-      <img src="imagescf/imagexemple2.webp" alt="Parfum Boisé" width="150" />
-      <h4>Parfum Boisé</h4>
-      <p>Un parfum intense avec des notes boisées et épicées.</p>
+    <article class="produit" data-id="2" data-nom="Parfum Bois�" data-contenance="100ml" data-prix="3000">
+      <img src="imagescf/imagexemple2.webp" alt="Parfum Bois�" width="150" />
+      <h4>Parfum Bois�</h4>
+      <p>Un parfum intense avec des notes bois�es et �pic�es.</p>
       <p>Contenance : 100 ml</p>
       <p><strong>Prix : 3000FCFA</strong></p>
       <button onclick="ajouterAuPanier(2)">Ajouter au panier</button>
@@ -38,23 +38,23 @@
 <article class="produit" data-id="3" data-nom="Parfum Intense" data-contenance="100ml" data-prix="3000">
       <img src="imagescf/imagexemple3.webp" alt="Parfum intense" width="150" />
       <h4>Parfum Intense</h4>
-      <p>Un parfum intense avec des notes boisées et épicées.</p>
+      <p>Un parfum intense avec des notes bois�es et �pic�es.</p>
       <p>Contenance : 100 ml</p>
       <p><strong>Prix : 3000FCFA</strong></p>
       <button onclick="ajouterAuPanier(3)">Ajouter au panier</button>
     </article>
-<article class="produit" data-id="4" data-nom="Parfum Boisé" data-contenance="100ml" data-prix="3000">
-      <img src="imagescf/imagexemple4.webp" alt="Parfum Boisé" width="150" />
-      <h4>Parfum Boisé</h4>
-      <p>Un parfum intense avec des notes boisées et épicées.</p>
+<article class="produit" data-id="4" data-nom="Parfum Bois�" data-contenance="100ml" data-prix="3000">
+      <img src="imagescf/imagexemple4.webp" alt="Parfum Bois�" width="150" />
+      <h4>Parfum Bois�</h4>
+      <p>Un parfum intense avec des notes bois�es et �pic�es.</p>
       <p>Contenance : 100 ml</p>
       <p><strong>Prix : 3000FCFA</strong></p>
       <button onclick="ajouterAuPanier(4)">Ajouter au panier</button>
     </article>
-<article class="produit" data-id="5" data-nom="Parfum Boisé" data-contenance="100ml" data-prix="3000">
-      <img src="imagescf/imagexemple5.webp" alt="Parfum Boisé" width="150" />
-      <h4>Parfum Boisé</h4>
-      <p>Un parfum intense avec des notes boisées et épicées.</p>
+<article class="produit" data-id="5" data-nom="Parfum Bois�" data-contenance="100ml" data-prix="3000">
+      <img src="imagescf/imagexemple5.webp" alt="Parfum Bois�" width="150" />
+      <h4>Parfum Bois�</h4>
+      <p>Un parfum intense avec des notes bois�es et �pic�es.</p>
       <p>Contenance : 100 ml</p>
       <p><strong>Prix : 3000FCFA</strong></p>
       <button onclick="ajouterAuPanier(5)">Ajouter au panier</button>
@@ -137,7 +137,7 @@
   </script>
 <section id="contacts" style="margin-top: 40px; background: #fff; padding: 20px; border-radius: 8px;">
     <h3>Contactez-nous</h3>
-    <p>&#128222; Téléphone <a href="tel:+221776631653">77 663 16 53</a></p>
+    <p>&#128222; T�l�phone <a href="tel:+221776631653">77 663 16 53</a></p>
     <p>&#128231; Courriel <a href="mailto:elhadjimomardiop77@gmail.com">elhadjimomardiop77@gmail.com</a></p>
     <p>&#128205;Adresse : Dakar, Senegal</p>
   </section>
