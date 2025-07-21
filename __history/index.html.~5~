@@ -13,7 +13,7 @@
 <main>
 <img src="imagescf/logocf.jpg" height="250" width="600" />
     <h2><marquee>BIENVENUE CHEZ CALYPSO FRAGRANCE</marquee></h2>
-    <p><<Découvrez nos parfums uniques, élégants et envoûtants>>.</p>
+    <p>"Découvrez nos parfums uniques, élégants et envoûtants".</p>
     
     <section id="produits">
     <h3>Nos produits</h3>
