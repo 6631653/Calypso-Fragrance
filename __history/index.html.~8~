@@ -21,7 +21,7 @@
     <article class="produit" data-id="1" data-nom="Parfum Floral" data-contenance="100ml" data-prix="3000">
       <img src="imagescf/imagexemple1.webp" alt="Parfum Floral" width="150" />
       <h4>Parfum Floral</h4>
-      <p>Un parfum lÃ©ger et frais aux notes florales.</p>
+      <p>Un parfum léger et frais aux notes florales.</p>
       <p>Contenance : 100 ml</p>
       <p><strong>Prix : 3000FCFA</strong></p>
       <button onclick="ajouterAuPanier(1)">Ajouter au panier</button>
